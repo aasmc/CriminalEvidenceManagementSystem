@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="13">
+      <module name="CriminalEvidenceManagementSystem.chapter00.dao.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter00.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter00.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.dao.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.dao.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.dao].main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.dao].test" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

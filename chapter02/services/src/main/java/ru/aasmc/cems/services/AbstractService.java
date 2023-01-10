@@ -1,9 +1,11 @@
 package ru.aasmc.cems.services;
 
+import java.util.Optional;
+
 public interface AbstractService<T> {
     void save(T entity);
 
-    T findById(Long entityId);
+    Optional<T> findById(Long entityId);
 
     void delete(T entity);
 

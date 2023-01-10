@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/chapter00" />
             <option value="$PROJECT_DIR$/chapter00/dao" />
             <option value="$PROJECT_DIR$/chapter00/repos" />
+            <option value="$PROJECT_DIR$/chapter02" />
+            <option value="$PROJECT_DIR$/chapter02/services" />
           </set>
         </option>
       </GradleProjectSettings>

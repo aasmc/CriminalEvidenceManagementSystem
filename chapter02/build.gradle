@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    group 'ru.aasmc.cems'
+    if (!project.name.contains("boot")) {
+        apply plugin: 'java'
+        apply plugin: 'idea'
+
+        dependencies {
+            implementation project(':chapter00:dao')
+            implementation project(':chapter00:repos')
+            implementation misc.lang3, misc.slf4j
+
+            implementation(misc.logback) {
+                exclude group: "javax.activation", module: "activation"
+                exclude group: "edu.washington.cs.types.checker", module: "checker-framework"
+            }
+
+            testImplementation spring.test, testing.api
+            testRuntimeOnly testing.platformRunner, testing.engine
+        }
+
+        test {
+            exclude 'module-info.class'
+            useJUnitPlatform()
+
+            testLogging {
+                events 'PASSED', 'FAILED', 'SKIPPED'
+            }
+        }
+
+        afterEvaluate {
+            repositories {
+                mavenCentral()
+            }
+
+            compileJava {
+                inputs.property("moduleName", moduleName)
+                doFirst {
+                    options.compilerArgs = [
+                            '-proc:none',
+                            '--module-path', classpath.asPath,
+                    ]
+                    classpath = files()
+                }
+            }
+        }
+    }
+}

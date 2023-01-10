@@ -3,8 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="13">
       <module name="CriminalEvidenceManagementSystem.chapter00.main" target="16" />
-      <module name="CriminalEvidenceManagementSystem.chapter00.repos.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter00.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter02.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter02.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao].main" target="16" />
@@ -12,6 +13,9 @@
       <module name="CriminalEvidenceManagementSystem.repos" target="16" />
       <module name="CriminalEvidenceManagementSystem.repos.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.repos.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.services" target="16" />
+      <module name="CriminalEvidenceManagementSystem.services.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.services.test" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

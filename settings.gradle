@@ -8,4 +8,6 @@ rootProject.children.each { project ->
 }
 include 'chapter00:dao'
 include 'chapter00:repos'
+include 'chapter02:services'
+include 'chapter02'
 

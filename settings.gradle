@@ -7,4 +7,5 @@ rootProject.children.each { project ->
     assert project.buildFile.isFile()
 }
 include 'chapter00:dao'
+include 'chapter00:repos'
 

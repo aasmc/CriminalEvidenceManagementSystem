@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'ru.aasmc.cems.repos'
+
+
+dependencies {
+    implementation project(':chapter00:dao')
+
+    implementation misc.lang3, misc.ojdbc, misc.slf4j, spring.jdbc, spring.contextSupport
+
+    implementation(misc.logback) {
+        exclude group: "javax.activation", module: "activation"
+        exclude group: "edu.washington.cs.types.checker", module: "checker-framework"
+    }
+}

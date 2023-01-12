@@ -1,10 +1,8 @@
-package ru.aasmc.cems.services.impl;
+package ru.aasmc.cems.services.simpleimpl;
 
 import ru.aasmc.cems.dao.AbstractEntity;
 import ru.aasmc.cems.repos.AbstractRepo;
 import ru.aasmc.cems.services.AbstractService;
-
-import java.util.Optional;
 
 public abstract class SimpleAbstractService <T extends AbstractEntity> implements AbstractService<T> {
     abstract AbstractRepo<T> getRepo();
@@ -14,8 +12,8 @@ public abstract class SimpleAbstractService <T extends AbstractEntity> implement
     }
 
     @Override
-    public Optional<T> findById(Long entityId){
-        return getRepo().findById(entityId);
+    public T findById(Long entityId){
+        return getRepo().findById(entityId).orElse(null);
     }
 
     @Override

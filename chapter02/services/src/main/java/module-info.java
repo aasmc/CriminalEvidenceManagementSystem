@@ -5,5 +5,5 @@ module com.apress.cems.pojos {
     requires ru.aasmc.cems.repos;
 
     exports ru.aasmc.cems.services;
-    exports ru.aasmc.cems.services.impl;
+    exports ru.aasmc.cems.services.simpleimpl;
 }

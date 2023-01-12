@@ -6,6 +6,9 @@ module ru.aasmc.cems.repos {
     requires spring.tx;  // needed only for testing @Transactional on repo
     requires java.sql;
     requires org.apache.commons.lang3;
+    requires java.annotation;
+    requires spring.core;
+
 
     exports ru.aasmc.cems.repos;
     exports ru.aasmc.cems.repos.util;

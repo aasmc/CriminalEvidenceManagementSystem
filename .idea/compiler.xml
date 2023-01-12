@@ -3,7 +3,6 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="13">
       <module name="CriminalEvidenceManagementSystem.chapter00.main" target="16" />
-      <module name="CriminalEvidenceManagementSystem.chapter00.repos.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter00.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.test" target="16" />

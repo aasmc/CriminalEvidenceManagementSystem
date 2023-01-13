@@ -10,4 +10,6 @@ include 'chapter00:dao'
 include 'chapter00:repos'
 include 'chapter02:services'
 include 'chapter02'
+include 'chapter03'
+include 'chapter03:junit-tests'
 

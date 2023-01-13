@@ -6,10 +6,16 @@
       <module name="CriminalEvidenceManagementSystem.chapter00.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter03.junit-tests.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter03.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.chapter03.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao].main" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao].test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.junit-tests" target="16" />
+      <module name="CriminalEvidenceManagementSystem.junit-tests.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.junit-tests.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.repos" target="16" />
       <module name="CriminalEvidenceManagementSystem.repos.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.repos.test" target="16" />

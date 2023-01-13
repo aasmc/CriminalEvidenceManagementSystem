@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'com.apress.cems.junit'
+
+dependencies {
+    api project(':chapter00:dao')
+    api project(':chapter00:repos')
+    api project(':chapter02:services')
+    testImplementation testing.junit, testing.easymock, testing.jmockju4, testing.mockitoAll
+    testRuntimeOnly testing.vintageEngine
+}

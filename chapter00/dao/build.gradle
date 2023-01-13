@@ -5,5 +5,5 @@ plugins {
 ext.moduleName = 'ru.aasmc.cems.dao'
 
 dependencies {
-    implementation hibernate.core, misc.javaxValidation, misc.jacksonDatabind, misc.jacksonJsr310, spring.contextSupport
+    api hibernate.core, misc.javaxValidation, misc.jacksonDatabind, misc.jacksonJsr310, spring.contextSupport
 }

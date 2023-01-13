@@ -8,9 +8,9 @@ ext.moduleName = 'ru.aasmc.cems.repos'
 dependencies {
     implementation project(':chapter00:dao')
 
-    implementation misc.lang3, misc.ojdbc, misc.slf4j, spring.jdbc, spring.contextSupport, misc.jsr250
+    api misc.lang3, misc.ojdbc, misc.slf4j, spring.jdbc, spring.contextSupport, misc.jsr250
 
-    implementation(misc.logback) {
+    api(misc.logback) {
         exclude group: "javax.activation", module: "activation"
         exclude group: "edu.washington.cs.types.checker", module: "checker-framework"
     }

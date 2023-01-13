@@ -6,7 +6,6 @@
       <module name="CriminalEvidenceManagementSystem.chapter00.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter02.test" target="16" />
-      <module name="CriminalEvidenceManagementSystem.chapter03.junit-tests.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter03.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.chapter03.test" target="16" />
       <module name="CriminalEvidenceManagementSystem.dao.main" target="16" />
@@ -22,6 +21,9 @@
       <module name="CriminalEvidenceManagementSystem.services" target="16" />
       <module name="CriminalEvidenceManagementSystem.services.main" target="16" />
       <module name="CriminalEvidenceManagementSystem.services.test" target="16" />
+      <module name="CriminalEvidenceManagementSystem.spring-jupiter-tests" target="16" />
+      <module name="CriminalEvidenceManagementSystem.spring-jupiter-tests.main" target="16" />
+      <module name="CriminalEvidenceManagementSystem.spring-jupiter-tests.test" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

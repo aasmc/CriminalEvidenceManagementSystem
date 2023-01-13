@@ -12,4 +12,5 @@ include 'chapter02:services'
 include 'chapter02'
 include 'chapter03'
 include 'chapter03:junit-tests'
+include 'chapter03:spring-jupiter-tests'
 

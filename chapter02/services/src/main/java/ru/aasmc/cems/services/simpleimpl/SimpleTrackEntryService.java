@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.Detective;
 import ru.aasmc.cems.dao.Evidence;
 import ru.aasmc.cems.dao.TrackEntry;
@@ -10,8 +12,14 @@ import ru.aasmc.cems.util.TrackAction;
 
 import java.time.LocalDateTime;
 
+@Service
 public class SimpleTrackEntryService extends SimpleAbstractService<TrackEntry> implements TrackEntryService {
-    private TrackEntryRepo repo;
+    private final TrackEntryRepo repo;
+
+    @Autowired
+    public SimpleTrackEntryService(TrackEntryRepo repo) {
+        this.repo = repo;
+    }
 
     @Override
     public TrackEntry createTrackEntry(Evidence evidence, Detective detective, LocalDateTime date, TrackAction action, String reason) {
@@ -23,10 +31,6 @@ public class SimpleTrackEntryService extends SimpleAbstractService<TrackEntry> i
         trackEntry.setReason(reason);
         repo.save(trackEntry);
         return trackEntry;
-    }
-
-    public void setRepo(TrackEntryRepo repo) {
-        this.repo = repo;
     }
 
     @Override

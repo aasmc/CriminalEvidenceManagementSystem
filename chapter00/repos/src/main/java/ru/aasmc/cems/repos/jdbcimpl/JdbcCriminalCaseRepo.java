@@ -47,7 +47,7 @@ public class JdbcCriminalCaseRepo extends JdbcAbstractRepo<CriminalCase> impleme
     }
 
     @Override
-    public void save(CriminalCase cc) {
+    public CriminalCase save(CriminalCase cc) {
         jdbcTemplate.update(
                 "insert into CRIMINAL_CASE(ID, CASE_NUMBER, CASE_TYPE, STATUS, " +
                         "SHORT_DESCRIPTION, LEAD_INVESTIGATOR ) values(?,?,?,?,?,?,?)",
@@ -55,6 +55,7 @@ public class JdbcCriminalCaseRepo extends JdbcAbstractRepo<CriminalCase> impleme
                 cc.getShortDescription(), cc.getLeadInvestigator().getId()
 
         );
+        return cc;
     }
 
     @Override

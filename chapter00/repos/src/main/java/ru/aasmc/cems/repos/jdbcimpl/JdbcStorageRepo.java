@@ -37,12 +37,13 @@ public class JdbcStorageRepo extends JdbcAbstractRepo<Storage> implements Storag
     }
 
     @Override
-    public void save(Storage storage) {
+    public Storage save(Storage storage) {
         jdbcTemplate.update(
                 "insert into STORAGE(ID, NAME, LOCATION, MODIFIED_AT, CREATED_AT) " +
                         "values(?,?,?,?,?)",
                 storage.getId(), storage.getName(), storage.getLocation(), LocalDateTime.now(), LocalDateTime.now()
         );
+        return storage;
     }
 
     @Override

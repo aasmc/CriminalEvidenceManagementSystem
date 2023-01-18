@@ -11,4 +11,9 @@ public interface StorageService extends AbstractService<Storage> {
     Optional<Storage> findByName(String name);
 
     Optional<Storage> findByLocation(String location);
+
+    Storage save(Storage storage);
+
+    void saveEvidenceSet(Storage storage);
+
 }

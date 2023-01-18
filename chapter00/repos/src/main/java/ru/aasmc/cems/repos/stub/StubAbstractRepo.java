@@ -12,12 +12,13 @@ public abstract class StubAbstractRepo <T extends AbstractEntity> implements Abs
     protected Map<Long, T> records = new HashMap<>();
 
     @Override
-    public void save(T entity) {
+    public T save(T entity) {
         if (entity.getId() == null) {
             var id = (long) records.size() + 1;
             entity.setId(id);
         }
         records.put(entity.getId(), entity);
+        return entity;
     }
 
     @Override

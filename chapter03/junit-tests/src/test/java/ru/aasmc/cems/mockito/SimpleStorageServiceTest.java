@@ -26,8 +26,7 @@ public class SimpleStorageServiceTest {
 
     @Before
     public void setup() {
-        storageService = new SimpleStorageService();
-        storageService.setRepo(mockRepo);
+        storageService = new SimpleStorageService(mockRepo);
     }
 
     @Test

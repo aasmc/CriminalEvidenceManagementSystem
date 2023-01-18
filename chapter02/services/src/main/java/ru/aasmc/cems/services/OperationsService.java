@@ -30,13 +30,4 @@ public interface OperationsService {
 
     Set<Detective> getAssignedTeam(String caseNumber);
 
-    // setter skeletons for setting repositories
-
-    void setCriminalCaseRepo(CriminalCaseRepo criminalCaseRepo);
-
-    void setEvidenceRepo(EvidenceRepo evidenceRepo);
-
-    void setDetectiveRepo(DetectiveRepo detectiveRepo);
-
-    void setStorageRepo(StorageRepo storageRepo);
 }

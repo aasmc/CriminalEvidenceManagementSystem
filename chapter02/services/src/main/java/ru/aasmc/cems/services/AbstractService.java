@@ -1,7 +1,7 @@
 package ru.aasmc.cems.services;
 
 public interface AbstractService<T> {
-    void save(T entity);
+    T save(T entity);
 
     T findById(Long entityId);
 

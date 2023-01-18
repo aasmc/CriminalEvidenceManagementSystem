@@ -30,7 +30,7 @@ public class JdbcPersonRepo extends JdbcAbstractRepo<Person> implements PersonRe
     public Optional<Person> findById(Long entityId) {
         var sql = "select ID, USERNAME, FIRSTNAME, LASTNAME, PASSWORD, HIRINGDATE " +
                 "from PERSON where ID= ?";
-        return Optional.ofNullable(jdbcTemplate.queryForObject(sql, rowMapper, entityId));
+        return Optional.of(jdbcTemplate.queryForObject(sql, rowMapper, entityId));
     }
 
     @Override
@@ -44,7 +44,7 @@ public class JdbcPersonRepo extends JdbcAbstractRepo<Person> implements PersonRe
     public Optional<Person> findByCompleteName(String firstName, String lastName) {
         var sql = "select ID, USERNAME, FIRSTNAME, LASTNAME, PASSWORD, HIRINGDATE " +
                 "from PERSON where FIRSTNAME= ? and LASTNAME= ?";
-        return Optional.ofNullable(jdbcTemplate.queryForObject(sql,
+        return Optional.of(jdbcTemplate.queryForObject(sql,
                 new Object[]{firstName, lastName}, rowMapper));
     }
 
@@ -69,13 +69,14 @@ public class JdbcPersonRepo extends JdbcAbstractRepo<Person> implements PersonRe
     }
 
     @Override
-    public void save(Person person) {
+    public Person save(Person person) {
         jdbcTemplate.update(
                 "insert into PERSON(ID, USERNAME, FIRSTNAME, LASTNAME, PASSWORD, " +
                         "HIRINGDATE, MODIFIED_AT, CREATED_AT, VERSION) values(?,?,?,?,?,?,?,?,?)",
                 person.getId(), person.getUsername(), person.getFirstName(), person.getLastName(), person.getPassword(),
                 person.getHiringDate(), LocalDateTime.now(), LocalDateTime.now(), 1
         );
+        return person;
     }
 
     @Override

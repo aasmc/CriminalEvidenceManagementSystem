@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.CriminalCase;
 import ru.aasmc.cems.dao.Detective;
 import ru.aasmc.cems.dao.Evidence;
@@ -11,11 +13,13 @@ import ru.aasmc.cems.util.CaseType;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class SimpleCriminalCaseService extends SimpleAbstractService<CriminalCase> implements CriminalCaseService {
 
-    private CriminalCaseRepo repo;
+    private final CriminalCaseRepo repo;
 
-    public void setRepo(CriminalCaseRepo repo) {
+    @Autowired
+    public SimpleCriminalCaseService(CriminalCaseRepo repo) {
         this.repo = repo;
     }
 

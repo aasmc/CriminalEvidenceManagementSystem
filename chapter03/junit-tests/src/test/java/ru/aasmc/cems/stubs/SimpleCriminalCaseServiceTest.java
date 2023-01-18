@@ -18,15 +18,14 @@ public class SimpleCriminalCaseServiceTest {
 
     StubCriminalCaseRepo repo = new StubCriminalCaseRepo();
 
-    SimpleCriminalCaseService service = new SimpleCriminalCaseService();
+    SimpleCriminalCaseService service = new SimpleCriminalCaseService(repo);
 
     @Before
     public void setUp(){
         repo.init();
 
         //create object to be tested
-        service = new SimpleCriminalCaseService();
-        service.setRepo(repo);
+        service = new SimpleCriminalCaseService(repo);
     }
 
     //positive test, we know that a Case with ID=1 exists

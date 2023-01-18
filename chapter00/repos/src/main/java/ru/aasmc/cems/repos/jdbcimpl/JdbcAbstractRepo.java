@@ -15,8 +15,8 @@ public class JdbcAbstractRepo <T extends AbstractEntity> implements AbstractRepo
     }
 
     @Override
-    public void save(T entity) {
-
+    public T save(T entity) {
+        return null;
     }
 
     @Override

@@ -38,9 +38,10 @@ public class StubCriminalCaseRepo extends StubAbstractRepo<CriminalCase> impleme
     }
 
     @Override
-    public void save(CriminalCase criminalCase) {
+    public CriminalCase save(CriminalCase criminalCase) {
         super.save(criminalCase);
         addWithLeadInvestigator(criminalCase);
+        return criminalCase;
     }
 
     private void addWithLeadInvestigator(CriminalCase criminalCase){

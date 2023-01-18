@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.Detective;
 import ru.aasmc.cems.dao.Person;
 import ru.aasmc.cems.repos.AbstractRepo;
@@ -11,13 +13,12 @@ import ru.aasmc.cems.util.Rank;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class SimpleDetectiveService extends SimpleAbstractService<Detective> implements DetectiveService {
 
-    private DetectiveRepo repo;
+    private final DetectiveRepo repo;
 
-    public SimpleDetectiveService() {
-    }
-
+    @Autowired
     public SimpleDetectiveService(DetectiveRepo repo) {
         this.repo = repo;
     }
@@ -40,11 +41,6 @@ public class SimpleDetectiveService extends SimpleAbstractService<Detective> imp
     @Override
     public Set<Detective> findByRank(Rank rank) {
         return repo.findByRank(rank);
-    }
-
-
-    public void setRepo(DetectiveRepo repo) {
-        this.repo = repo;
     }
 
     @Override

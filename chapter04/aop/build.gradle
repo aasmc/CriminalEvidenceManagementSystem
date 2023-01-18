@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'ru.aasmc.cems.aop'
+
+dependencies {
+    implementation project(':chapter00:dao')
+    implementation project(':chapter00:repos')
+    implementation project(':chapter02:services')
+    implementation misc.lang3, misc.slf4j, misc.jsr250, misc.h2, misc.aspectjweaver
+    testImplementation testing.api, testing.platformRunner, testing.mockito, spring.test
+    testRuntimeOnly testing.engine, testing.platformRunner
+}
+
+test {
+    useJUnitPlatform()
+}

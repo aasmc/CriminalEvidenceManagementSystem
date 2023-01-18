@@ -5,7 +5,7 @@ import ru.aasmc.cems.dao.AbstractEntity;
 import java.util.Optional;
 
 public interface AbstractRepo <T extends AbstractEntity> {
-    void save(T entity);
+    T save(T entity);
 
     void delete(T entity);
 

@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.Person;
 import ru.aasmc.cems.repos.AbstractRepo;
 import ru.aasmc.cems.repos.PersonRepo;
@@ -7,8 +9,14 @@ import ru.aasmc.cems.services.PersonService;
 
 import java.util.Optional;
 
+@Service
 public class SimplePersonService extends SimpleAbstractService<Person> implements PersonService {
-    private PersonRepo repo;
+    private final PersonRepo repo;
+
+    @Autowired
+    public SimplePersonService(PersonRepo repo) {
+        this.repo = repo;
+    }
 
     @Override
     public Person createPerson(String firstName, String lastName) {
@@ -27,10 +35,6 @@ public class SimplePersonService extends SimpleAbstractService<Person> implement
     @Override
     public Optional<Person> findByFirstNameAndLastName(String firstName, String lastName) {
         return repo.findByCompleteName(firstName, lastName);
-    }
-
-    public void setRepo(PersonRepo repo) {
-        this.repo = repo;
     }
 
     @Override

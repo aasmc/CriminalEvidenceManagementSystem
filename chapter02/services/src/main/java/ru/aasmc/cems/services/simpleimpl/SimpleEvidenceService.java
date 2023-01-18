@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.CriminalCase;
 import ru.aasmc.cems.dao.Evidence;
 import ru.aasmc.cems.dao.Storage;
@@ -11,12 +13,11 @@ import ru.aasmc.cems.util.NumberGenerator;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class SimpleEvidenceService extends SimpleAbstractService<Evidence> implements EvidenceService {
-    private EvidenceRepo repo;
+    private final EvidenceRepo repo;
 
-    public SimpleEvidenceService() {
-    }
-
+    @Autowired
     public SimpleEvidenceService(EvidenceRepo repo) {
         this.repo = repo;
     }
@@ -40,10 +41,6 @@ public class SimpleEvidenceService extends SimpleAbstractService<Evidence> imple
     @Override
     public Optional<Evidence> findByNumber(String evidenceNumber) {
         return repo.findByNumber(evidenceNumber);
-    }
-
-    public void setRepo(EvidenceRepo repo) {
-        this.repo = repo;
     }
 
     @Override

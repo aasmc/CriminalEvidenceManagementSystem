@@ -1,5 +1,7 @@
 package ru.aasmc.cems.services.simpleimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.aasmc.cems.dao.CriminalCase;
 import ru.aasmc.cems.dao.Detective;
 import ru.aasmc.cems.dao.Evidence;
@@ -18,12 +20,24 @@ import ru.aasmc.cems.util.Rank;
 import java.time.LocalDateTime;
 import java.util.*;
 
+@Service
 public class SimpleOperationsService implements OperationsService {
 
-    private CriminalCaseRepo criminalCaseRepo;
-    private EvidenceRepo evidenceRepo;
-    private DetectiveRepo detectiveRepo;
-    private StorageRepo storageRepo;
+    private final CriminalCaseRepo criminalCaseRepo;
+    private final EvidenceRepo evidenceRepo;
+    private final DetectiveRepo detectiveRepo;
+    private final StorageRepo storageRepo;
+
+    @Autowired
+    public SimpleOperationsService(CriminalCaseRepo criminalCaseRepo,
+                                   EvidenceRepo evidenceRepo,
+                                   DetectiveRepo detectiveRepo,
+                                   StorageRepo storageRepo) {
+        this.criminalCaseRepo = criminalCaseRepo;
+        this.evidenceRepo = evidenceRepo;
+        this.detectiveRepo = detectiveRepo;
+        this.storageRepo = storageRepo;
+    }
 
     @Override
     public Detective createDetective(String firstName, String lastName, LocalDateTime hiringDate, Rank rank) {
@@ -110,26 +124,5 @@ public class SimpleOperationsService implements OperationsService {
             return opt.get().getAssigned();
         }
         return new HashSet<>();
-    }
-
-    //setters
-    @Override
-    public void setCriminalCaseRepo(CriminalCaseRepo criminalCaseRepo) {
-        this.criminalCaseRepo = criminalCaseRepo;
-    }
-
-    @Override
-    public void setEvidenceRepo(EvidenceRepo evidenceRepo) {
-        this.evidenceRepo = evidenceRepo;
-    }
-
-    @Override
-    public void setDetectiveRepo(DetectiveRepo detectiveRepo) {
-        this.detectiveRepo = detectiveRepo;
-    }
-
-    @Override
-    public void setStorageRepo(StorageRepo storageRepo) {
-        this.storageRepo = storageRepo;
     }
 }

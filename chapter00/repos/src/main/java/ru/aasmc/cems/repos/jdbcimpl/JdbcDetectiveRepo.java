@@ -46,7 +46,7 @@ public class JdbcDetectiveRepo extends JdbcAbstractRepo<Detective> implements De
     }
 
     @Override
-    public void save(Detective detective) {
+    public Detective save(Detective detective) {
         jdbcTemplate.update(
                 "insert into DETECTIVE(ID, BADGE_NUMBER, RANK, ARMED, STATUS,PERSON_ID) " +
                         "values(?,?,?,?,?,?)",
@@ -54,6 +54,7 @@ public class JdbcDetectiveRepo extends JdbcAbstractRepo<Detective> implements De
                 detective.getRank(), detective.getStatus(),
                 detective.getPerson().getId()
         );
+        return detective;
     }
 
     @Override

@@ -41,4 +41,10 @@ public class SimplePersonService extends SimpleAbstractService<Person> implement
     AbstractRepo<Person> getRepo() {
         return repo;
     }
+
+    @Override
+    public Person updateFirstName(Person person, String newFirstname) {
+        person.setFirstName(newFirstname);
+        return repo.update(person);
+    }
 }

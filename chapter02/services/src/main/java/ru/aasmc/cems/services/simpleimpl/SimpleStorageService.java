@@ -50,7 +50,7 @@ public class SimpleStorageService extends SimpleAbstractService<Storage> impleme
     }
 
     @Override
-    AbstractRepo<Storage> getRepo() {
+    public AbstractRepo<Storage> getRepo() {
         return repo;
     }
 }

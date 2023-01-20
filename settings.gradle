@@ -16,4 +16,6 @@ include 'chapter03:spring-jupiter-tests'
 include 'chapter03:boot-test'
 include 'chapter04'
 include 'chapter04:aop'
+include 'chapter05'
+include 'chapter05:transactions'
 

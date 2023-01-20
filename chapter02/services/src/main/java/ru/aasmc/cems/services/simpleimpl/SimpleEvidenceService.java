@@ -44,7 +44,7 @@ public class SimpleEvidenceService extends SimpleAbstractService<Evidence> imple
     }
 
     @Override
-    AbstractRepo<Evidence> getRepo() {
+    public AbstractRepo<Evidence> getRepo() {
         return repo;
     }
 }

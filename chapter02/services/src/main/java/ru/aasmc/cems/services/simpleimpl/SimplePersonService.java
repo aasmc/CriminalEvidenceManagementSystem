@@ -38,7 +38,7 @@ public class SimplePersonService extends SimpleAbstractService<Person> implement
     }
 
     @Override
-    AbstractRepo<Person> getRepo() {
+    public AbstractRepo<Person> getRepo() {
         return repo;
     }
 

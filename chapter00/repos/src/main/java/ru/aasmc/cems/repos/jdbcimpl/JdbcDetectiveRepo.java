@@ -13,7 +13,6 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-@Transactional
 @Repository
 public class JdbcDetectiveRepo extends JdbcAbstractRepo<Detective> implements DetectiveRepo {
 

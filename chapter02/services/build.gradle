@@ -3,3 +3,8 @@ plugins {
 }
 
 ext.moduleName = 'ru.aasmc.cems.services'
+
+
+dependencies {
+    implementation misc.lang3, misc.slf4j, misc.jsr250, misc.h2, misc.aspectjweaver
+}

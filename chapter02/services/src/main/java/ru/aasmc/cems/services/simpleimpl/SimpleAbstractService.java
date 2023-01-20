@@ -5,7 +5,7 @@ import ru.aasmc.cems.repos.AbstractRepo;
 import ru.aasmc.cems.services.AbstractService;
 
 public abstract class SimpleAbstractService <T extends AbstractEntity> implements AbstractService<T> {
-    abstract AbstractRepo<T> getRepo();
+    protected abstract AbstractRepo<T> getRepo();
 
     public T save(T entity) {
         return getRepo().save(entity);

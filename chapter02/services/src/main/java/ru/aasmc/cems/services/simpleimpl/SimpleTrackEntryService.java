@@ -34,7 +34,7 @@ public class SimpleTrackEntryService extends SimpleAbstractService<TrackEntry> i
     }
 
     @Override
-    AbstractRepo<TrackEntry> getRepo() {
+    public AbstractRepo<TrackEntry> getRepo() {
         return null;
     }
 }

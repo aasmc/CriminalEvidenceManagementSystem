@@ -18,4 +18,5 @@ include 'chapter04'
 include 'chapter04:aop'
 include 'chapter05'
 include 'chapter05:transactions'
+include 'chapter05:data-jpa'
 

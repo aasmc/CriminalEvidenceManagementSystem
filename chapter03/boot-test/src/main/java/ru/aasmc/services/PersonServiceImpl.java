@@ -1,5 +1,6 @@
 package ru.aasmc.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.aasmc.entities.Person;
@@ -15,6 +16,7 @@ public class PersonServiceImpl implements PersonService {
 
     private final PersonRepo personRepo;
 
+    @Autowired
     public PersonServiceImpl(PersonRepo personRepo) {
         this.personRepo = personRepo;
     }

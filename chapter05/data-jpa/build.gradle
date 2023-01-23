@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'ru.aasmc.cems.dj'
+
+dependencies {
+    implementation project(':chapter00:dao')
+    implementation spring.data
+    implementation hibernate.ehcache, hibernate.em, hibernate.core, hibernate.validator
+    testImplementation testing.api, testing.platformRunner, testing.mockito, spring.test, misc.hikari
+    testImplementation testing.api
+    testRuntimeOnly testing.engine, testing.platformRunner
+}

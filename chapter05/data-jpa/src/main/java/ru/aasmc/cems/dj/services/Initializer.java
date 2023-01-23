@@ -51,9 +51,25 @@ public class Initializer {
     }
 
     private void createStorages() {
+        createStorage("Central London", "NW1 6XE");
+        createStorage("South London", "SW4 5XE");
+        createStorage("Central Edinburgh", "EH2 7DE");
+        createStorage("North Birmingham", "NB4 9RF");
+        createStorage("Central Newcastle Upon Thyne", "CN4 9UT");
+        createStorage("Central Fife", "CF4 9EH");
+        createStorage("Central Stirling", "CS1 6SC");
+        createStorage("South Falkirk", "SF4 5FS");
+        createStorage("Central Ayr", "CA2 7DA");
+        createStorage("North Cardiff", "NC4 5NA");
+        createStorage("East Devon", "DE4 2ED");
+        createStorage("Central Sussex", "CS4 7XC");
+        createStorage("Mancester Central", "MC1 2RC");
+    }
+
+    private void createStorage(final String name, final String address) {
         var storage = new Storage();
-        storage.setName("Central Storage");
-        storage.setLocation("London, NW1 6XE");
+        storage.setName(name);
+        storage.setLocation(address);
         storageService.save(storage);
     }
 

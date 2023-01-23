@@ -7,8 +7,9 @@ import ru.aasmc.cems.dao.Storage;
 import ru.aasmc.cems.dj.repos.StorageRepo;
 import ru.aasmc.cems.dj.services.StorageService;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 @Transactional
@@ -23,7 +24,10 @@ public class StorageServiceImpl implements StorageService {
 
     @Override
     public List<Storage> findAll() {
-        return storageRepo.findAll();
+        Iterable<Storage> all = storageRepo.findAll();
+        Iterator<Storage> iterator = all.iterator();
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED), false)
+                .collect(Collectors.toList());
     }
 
     @Override

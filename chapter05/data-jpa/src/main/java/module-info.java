@@ -17,7 +17,6 @@ module ru.aasmc.cems.dj {
     requires spring.orm;
     requires java.persistence;
     requires spring.data.commons;
-    requires ojdbc8;
 
     exports ru.aasmc.cems.dj;
     exports ru.aasmc.cems.dj.repos;

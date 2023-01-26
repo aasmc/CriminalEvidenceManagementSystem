@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+apply plugin: 'war'
+
+ext.moduleName = 'ru.aasmc.cems.classic.rest'
+
+dependencies {
+    implementation project(':chapter05:data-jpa')
+    implementation spring.webmvc, hibernate.validator, misc.h2, misc.hikari, misc.thymeleaf/*, misc.jacksonDatabind*/
+    implementation misc.servletApi
+    implementation  spring.securityWeb, spring.securityConfig
+
+    testImplementation testing.api, testing.platformRunner, testing.mockito, spring.test, testing.mockito
+    testImplementation testing.api,testing.restAssured, testing.restAssuredAll
+    testRuntimeOnly testing.engine, testing.platformRunner
+}

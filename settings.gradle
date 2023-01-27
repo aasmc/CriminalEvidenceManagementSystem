@@ -21,4 +21,5 @@ include 'chapter05:transactions'
 include 'chapter05:data-jpa'
 include 'chapter08'
 include 'chapter08:rest-classic-secured'
+include 'chapter08:boot-rest-secured'
 

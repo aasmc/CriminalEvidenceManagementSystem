@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/chapter05/data-jpa" />
             <option value="$PROJECT_DIR$/chapter05/transactions" />
             <option value="$PROJECT_DIR$/chapter08" />
+            <option value="$PROJECT_DIR$/chapter08/boot-rest-secured" />
             <option value="$PROJECT_DIR$/chapter08/rest-classic-secured" />
           </set>
         </option>
